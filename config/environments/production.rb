@@ -6,6 +6,15 @@ Rails.application.configure do
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
+  
+  config.action_mailer.smtp_settings = {
+    :port => '587',
+    :address => 'email-smtp.us-west-1.amazonaws.com',
+    :user_name => ENV['AWS_SMTP_USERNAME'],
+    :password => ENV['AWS_SMTP_PASSWORD'],
+    :authentication => :plain,
+    :enable_starttls_auto => true
+  }
 
   # Code is not reloaded between requests.
   config.cache_classes = true
