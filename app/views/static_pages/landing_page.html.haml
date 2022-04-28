@@ -1,9 +1,9 @@
-.jumbotron
+.jumbotron.p-t-50px.p-l-25px
   %h1.display-4 What do you want to learn today?
 
   .p-4
   
-  .form-inline.my-2.my-lg-0
+  .form-inline.my-2.my-lg-0.p-b-50px.p-l-25px
     = form_tag(courses_path, method: :get) do
       .input-group
         = text_field_tag :title, params[:title], autocomplete: 'off', placeholder: "Search", class: 'form-control-sm'
