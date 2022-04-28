@@ -1,34 +1,31 @@
-%h1 Hello World!
-= link_to "Privacy Policy", privacy_policy_path, class: "btn btn-lg btn-warning"
-= link_to privacy_policy_path, class: "btn btn-lg btn-warning" do
-  %i.fas.fa-file-word
-  Privacy Policy
-%h1
-  Example heading
-  %span.badge.bg-secondary New
-%h2
-  Example heading
-  %span.badge.bg-secondary New
-%h3
-  Example heading
-  %span.badge.bg-secondary New
-%h4
-  Example heading
-  %span.badge.bg-secondary New
-%h5
-  Example heading
-  %span.badge.bg-secondary New
-%h6
-  Example heading
-  %span.badge.bg-secondary New
-%i.far.fa-address-book
-%i.fab.fa-github.fa-spin
-= link_to root_path do
-  %i.far.fa-gem.fa-3x
-  Home
+.jumbotron
+  %h1.display-4 What do you want to learn today?
+
+  .p-4
   
-= link_to courses_path, class: 'btn btn-success' do
-  %i.fas.fa-book.fa-3x
-  Course
+  .form-inline.my-2.my-lg-0
+    = form_tag(courses_path, method: :get) do
+      .input-group
+        = text_field_tag :title, params[:title], autocomplete: 'off', placeholder: "Search", class: 'form-control-sm'
+        %span.input-group-append
+          %button.btn.btn-primary.btn-sm{:type => "submit"}
+            %span.fa.fa-search{"aria-hidden" => "true"}
 
-
+%hr
+%h2 Popular Courses
+.row
+  - @courses.each do |course|
+    .col-md-4
+      = render 'courses/course', course: course
+%hr
+%h2 Top Rated Courses
+.row
+  - @courses.each do |course|
+    .col-md-4
+      = render 'courses/course', course: course
+%hr
+%h2 Latest Courses
+.row
+  - @latest_courses.each do |course|
+    .col-md-4
+      = render 'courses/course', course: course
