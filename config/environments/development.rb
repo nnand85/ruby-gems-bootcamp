@@ -3,6 +3,7 @@ require "active_support/core_ext/integer/time"
 Rails.application.configure do
   config.hosts << "2ac4dcef67b14c68a9f12dcd089a355d.vfs.cloud9.us-west-1.amazonaws.com"
   config.action_mailer.default_url_options = { host: 'https://2ac4dcef67b14c68a9f12dcd089a355d.vfs.cloud9.us-west-1.amazonaws.com' }
+  config.action_mailer.delivery_method = :test
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded any time

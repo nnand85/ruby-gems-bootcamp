@@ -19,6 +19,9 @@ Things you may want to cover:
 
 * Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+* Deployment instructions (Manual Cloud9 to Heroku)
+* To login to Heroku through Cloud9:heroku login -i
+* To push code manually to Heroku: git push heroku main
+* To migrate Heroku DB: heroku run rake db:migrate
 
 * ...
