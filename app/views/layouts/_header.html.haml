@@ -21,6 +21,12 @@
           = link_to users_path, class: 'nav-link' do
             .fa.fa-user
             Users
+        %li.nav-item{class: "#{'active fw-bold' if current_page?(static_pages_activity_path)}"}
+          = link_to static_pages_activity_path, class: 'nav-link' do
+            .fa.fa-bell
+            Activity
+      
+      
       
       /SEARCH IN NAVBAR
       - if @ransack_courses.present?
