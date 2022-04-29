@@ -15,17 +15,14 @@
 %h2 Popular Courses
 .row
   - @courses.each do |course|
-    .col-md-4
-      = render 'courses/course', course: course
+    = render 'courses/course', course: course
 %hr
 %h2 Top Rated Courses
 .row
   - @courses.each do |course|
-    .col-md-4
-      = render 'courses/course', course: course
+    = render 'courses/course', course: course
 %hr
 %h2 Latest Courses
 .row
   - @latest_courses.each do |course|
-    .col-md-4
-      = render 'courses/course', course: course
+    = render 'courses/course', course: course
