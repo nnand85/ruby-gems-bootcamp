@@ -4,6 +4,10 @@
   margin-left: 10px;
 }
 
+.m-t-10px {
+  margin-top: 10px;
+}
+
 .p-t-50px {
   padding-top: 50px;
 }
@@ -22,3 +26,6 @@
   color: #FFFFFF;
   background-color: #777777 !important;
 }
+
+.form-control.is-invalid{ background-image: none; }
+.form-control.is-valid{ background-image: none; }
