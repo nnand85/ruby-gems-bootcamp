@@ -1,0 +1,16 @@
+%footer.bg-secondary.text-light
+  .container-fluid.text-center
+    %br/
+    .row
+      .col-lg-4
+        ©
+        \#{Time.now.year}
+        %br/
+        = link_to t('navigation.home'), root_path, class: "#{'active font-weight-bold' if current_page?(root_path)}", style: 'color: white;'
+        %br/
+
+      .col-lg-4
+        .row
+        = link_to 'Teach on This Hard to Make Site', new_course_path, class: "#{'active font-weight-bold' if current_page?(new_course_path)}", style: 'color: white;'
+
+  %br/

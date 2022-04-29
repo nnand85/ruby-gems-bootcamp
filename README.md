@@ -24,5 +24,7 @@ Things you may want to cover:
 * To push code manually to Heroku: git push heroku main
 * To migrate Heroku DB: heroku run rake db:migrate
 * To run Heroku DB Seeds: heroku run rake db:seed
+* To restart the Heroku server: heroku restart
+* To access Heroku console: heroku console
 
 * ...
