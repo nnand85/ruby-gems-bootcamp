@@ -28,7 +28,8 @@ gem 'devise'
 gem 'friendly_id', '~> 5.4.0'
 gem 'ransack'
 gem 'public_activity'
-gem "rolify"
+gem 'rolify'
+gem 'pundit'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
