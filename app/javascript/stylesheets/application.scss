@@ -27,8 +27,8 @@
 
 
 .jumbotron{
-  color: #FFFFFF;
-  background-color: #777777 !important;
+  color: #000000;
+  background: linear-gradient(to bottom, lightyellow 0%, lightyellow 33%, yellow 33%, yellow 66%, orange 66%, orange 100%);
 }
 
 .form-control.is-invalid{ background-image: none; }
