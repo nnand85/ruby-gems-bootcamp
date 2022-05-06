@@ -27,5 +27,6 @@
   .col-sm-10
     .row
       - @courses.each do |course|
-        = render 'courses/course', course: course
+        .col-sm-4
+          = render 'courses/course', course: course
         

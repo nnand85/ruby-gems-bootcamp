@@ -1,10 +1,13 @@
-.col-sm-4
+.col-sm-12
   .card
     .card-header
       .fa.fa-graduation-cap
       = link_to course.title, course_path(course)
     .card-body
       = course.short_description
+    .card-footer
+      .fa.fa-book
+      = course.lessons.count
     .card-footer
       .text-center
         = number_to_currency(course.price)
