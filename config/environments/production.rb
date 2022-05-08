@@ -7,6 +7,13 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   
+  Rails.application.config.middleware.use ExceptionNotification::Rack,
+  email: {
+    email_prefix: '[PREFIX] ',
+    sender_address: %{"RoR Error" <nnand85+errors@gmail.com>},
+    exception_recipients: %w{nnand85@gmail.com}
+  }
+  
   config.action_mailer.smtp_settings = {
     :port => '587',
     :address => 'email-smtp.us-west-1.amazonaws.com',
