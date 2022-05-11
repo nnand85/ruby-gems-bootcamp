@@ -4,7 +4,10 @@
     = @user.email
   .card-body
     = simple_form_for @user do |f|
-      = f.collection_check_boxes :role_ids, Role.all, :id, :name
+      = f.collection_check_boxes :role_ids, Role.all, :id, :name do |cb|
+        =cb.label class: 'form-check-label m-l-10px' do
+          =cb.check_box class: 'form-check-input'
+          =cb.text 
       = f.error :roles, class: 'text-danger'
       %hr
       = f.button :submit, class: "btn btn-success"
