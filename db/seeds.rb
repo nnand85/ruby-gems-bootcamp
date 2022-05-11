@@ -18,3 +18,5 @@ end
         price: Faker::Number.between(from: 10, to: 1000)
     }])
 end
+
+PublicActivity.enabled = true
