@@ -1,3 +1,8 @@
+- content_for :title do
+  RGB
+  \|
+  = @lesson.title
+
 = link_to 'Courses', courses_path
 \/
 = link_to @lesson.course.title, course_path(@lesson.course)

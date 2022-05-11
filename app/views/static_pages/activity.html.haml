@@ -1,3 +1,8 @@
+- content_for :title do
+  RGB
+  \| 
+  Activity
+
 %h3
   .text-center
     Activity
@@ -8,10 +13,11 @@
 %ul.list-group
   - @activities.each do |activity|
     %li.list-group-item
-      = activity.id
+      = activity.created_at.strftime('%d/%m/%Y, %H:%M')
+      (#{time_ago_in_words(activity.created_at)})
       = activity.trackable_type
       = activity.trackable_id
-      = link_to activity.trackable, activity.trackable
+      = link_to activity.trackable
       = activity.key
       = activity.parameters
       = activity.owner
