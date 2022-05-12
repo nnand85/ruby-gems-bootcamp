@@ -8,15 +8,15 @@ if User.find_by_email("nnand85@gmail.com").nil?
 end
 
 30.times do
-    Course.create!([{
-        title: Faker::Educator.course_name,
-        description: Faker::TvShows::GameOfThrones.quotes,
-        user_id: User.last.id,
-        short_description: Faker::Quote.famous_last_words,
-        language: 'English',
-        level: 'Intermediate',
-        price: Faker::Number.between(from: 10, to: 1000)
-    }])
+  Course.create!([{
+    title: Faker::Educator.course_name,
+    description: Faker::TvShows::GameOfThrones.quotes,
+    user_id: User.last.id,
+    short_description: Faker::Quote.famous_last_words,
+    language: 'English',
+    level: 'Intermediate',
+    price: Faker::Number.between(from: 10, to: 1000)
+  }])
 end
 
 PublicActivity.enabled = true

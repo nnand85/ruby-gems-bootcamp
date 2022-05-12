@@ -1,0 +1,30 @@
+- content_for :title do
+  RGB
+  \|
+  = @enrollment
+  
+.card
+  .card-header
+    %h3
+      .fa.fa-lock-open
+      = @enrollment
+  .card-body
+    %p
+      %b Course:
+      = @enrollment.course
+    %p
+      %b User:
+      = @enrollment.user
+    %p
+      %b Rating:
+      = @enrollment.rating
+    %p
+      %b Review:
+      = @enrollment.review
+    %p
+      %b Price:
+      = number_to_currency(@enrollment.price)
+  .card-footer
+    = link_to 'Edit Enrollment', edit_enrollment_path(@enrollment)
+    \|
+    = link_to 'Back to Enrollments', enrollments_path
