@@ -10,7 +10,7 @@
       = course.lessons.count
     .card-footer
       .text-center
-        = number_to_currency(course.price)
+        = enrollment_button(course)
     .card-footer{ :style => "font-size: small" }
       .row
         .col-md-6
